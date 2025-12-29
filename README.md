@@ -1,4 +1,4 @@
-<h1 align="left">Hi 👋, I'm Natsu</h1>
+<h1 align="left">Hi, I'm Natsu</h1>
 <h3 align="left">Full-stack Engineer specializing in React/Vue and Python-based AI Agents.</h3>
 
 <!-- <h3 align="left">Connect with me:</h3>
