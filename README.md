@@ -9,10 +9,10 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtf10061-bit&theme=react-dark&area=true&hide_border=true" width="100%" />
 </p>
 
-### 📊 My GitHub Contributions (3D View)
+<!-- ### 📊 My GitHub Contributions (3D View)
 <div align="center">
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="90%">
-</div>
+</div> -->
 
 <h3 align="left">Languages and Tools:</h3>
 
