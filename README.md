@@ -16,9 +16,6 @@
 
 <h3 align="left">Languages and Tools:</h3>
 
-![](https://github-readme-stats.vercel.app/api/top-langs?username=yukimura-manase&show_icons=true&locale=en&layout=compact)
-
-
 #### 🌐 Frontend
 <p align="left">
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
