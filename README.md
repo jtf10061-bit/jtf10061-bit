@@ -10,6 +10,7 @@
 </p>
 
 <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtf10061-bit&layout=compact&theme=react&hide_border=true" /> -->
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=jtf10061-bit&theme=react" />
 
 ![Languages](https://metrics.lecoq.io/jtf10061-bit?template=classic&base=languages&base.indepth=false&base.repositories=0&base.metadata=0&config.timezone=Asia%2FTokyo)
 
