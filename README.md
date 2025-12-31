@@ -9,6 +9,8 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtf10061-bit&theme=react-dark&area=true&hide_border=true" width="100%" />
 </p>
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtf10061-bit&layout=compact&theme=react&hide_border=true" />
+
 ![Languages](https://metrics.lecoq.io/jtf10061-bit?template=classic&base=languages&base.indepth=false&base.repositories=0&base.metadata=0&config.timezone=Asia%2FTokyo)
 
 <!-- ### 📊 My GitHub Contributions (3D View)
