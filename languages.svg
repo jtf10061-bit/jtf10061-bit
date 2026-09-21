@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="516" height="156" viewBox="0 0 516 156" role="img" aria-label="Most used languages">
+<style>
+  .bg{fill:none}
+  .title{font:600 15px -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;fill:#57606a}
+  .lang{font:500 13px -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;fill:#24292f}
+  .pct{font:500 13px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#57606a}
+  .track{fill:#eaeef2}
+  @media (prefers-color-scheme:dark){
+    .title{fill:#8b949e}.lang{fill:#e6edf3}.pct{fill:#8b949e}.track{fill:#21262d}
+  }
+</style>
+<rect class="bg" width="516" height="156"/>
+<text class="title" x="20" y="26">Most used languages</text>
+<text class="lang" x="20" y="58">Python</text>
+<rect class="track" x="138" y="52.0" width="300" height="10" rx="5"/>
+<rect x="138" y="52.0" width="129.39" height="10" rx="5" fill="#3572A5"/>
+<text class="pct" x="448" y="58">43.1%</text>
+<text class="lang" x="20" y="88">TypeScript</text>
+<rect class="track" x="138" y="82.0" width="300" height="10" rx="5"/>
+<rect x="138" y="82.0" width="121.05" height="10" rx="5" fill="#3178c6"/>
+<text class="pct" x="448" y="88">40.3%</text>
+<text class="lang" x="20" y="118">CSS</text>
+<rect class="track" x="138" y="112.0" width="300" height="10" rx="5"/>
+<rect x="138" y="112.0" width="47.10" height="10" rx="5" fill="#663399"/>
+<text class="pct" x="448" y="118">15.7%</text>
+</svg>
