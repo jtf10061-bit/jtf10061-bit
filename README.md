@@ -5,10 +5,6 @@
 <p align="left"> -->
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jtf10061-bit&theme=react-dark&area=true&hide_border=true" width="100%" />
-</p>
-
 <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtf10061-bit&layout=compact&theme=react&hide_border=true" /> -->
 <!-- <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=jtf10061-bit&theme=react" /> -->
 
