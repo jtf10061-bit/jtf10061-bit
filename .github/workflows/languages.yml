@@ -1,0 +1,50 @@
+name: Language Stats
+
+on:
+  schedule:
+    # 毎日 03:00 JST (= 18:00 UTC)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/languages.yml"
+      - "scripts/gen_languages.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: language-stats
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate languages.svg
+        env:
+          # Actions が自動発行するトークン。PAT の登録は不要。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          METRICS_USER: ${{ github.repository_owner }}
+          METRICS_OUT: languages.svg
+        run: python3 scripts/gen_languages.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 変更がないときはコミットせず正常終了する
+          if git diff --quiet -- languages.svg; then
+            echo "no change"
+            exit 0
+          fi
+          git add languages.svg
+          git commit -m "chore: 言語統計を更新"
+          git push
