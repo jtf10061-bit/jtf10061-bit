@@ -12,7 +12,7 @@
 <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jtf10061-bit&layout=compact&theme=react&hide_border=true" /> -->
 <!-- <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=jtf10061-bit&theme=react" /> -->
 
-![Languages](./github-metrics.svg)
+![Languages](./languages.svg)
 
 <!-- ### 📊 My GitHub Contributions (3D View)
 <div align="center">
