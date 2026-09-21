@@ -8,6 +8,7 @@ API 側で既に除外済みのため、ここでの追加処理は不要。
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -36,8 +37,23 @@ def api(url):
         "User-Agent": "language-stats-generator",
         **({"Authorization": f"Bearer {TOKEN}"} if TOKEN else {}),
     })
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            # 403/429 はレート制限。指数バックオフで待って再試行する。
+            if e.code in (403, 429) and attempt < 2:
+                wait = 5 * (2 ** attempt)
+                print(f"  rate limited, retry in {wait}s", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            raise
+        except urllib.error.URLError:
+            if attempt < 2:
+                time.sleep(3)
+                continue
+            raise
 
 
 def collect():
@@ -137,8 +153,13 @@ def main():
     if not rows:
         print("no language data found", file=sys.stderr)
         return 1
-    with open(OUT, "w", encoding="utf-8") as f:
-        f.write(render(rows))
+    # 一時ファイルに書いてから置換する。生成途中で失敗しても
+    # 既存の SVG を壊さない。
+    svg = render(rows)
+    tmp = OUT + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        f.write(svg)
+    os.replace(tmp, OUT)
     for lang, size, pct in rows:
         print(f"{lang:<14}{size:>10,} B  {pct:5.1f}%")
     print(f"-> {OUT}")

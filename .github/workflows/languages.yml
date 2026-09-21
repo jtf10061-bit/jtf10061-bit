@@ -38,13 +38,22 @@ jobs:
 
       - name: Commit if changed
         run: |
+          set -euo pipefail
+          # 生成物が無ければ即座に失敗させる。
+          # 失敗したまま "success" と報告される事故を防ぐ。
+          if [ ! -s languages.svg ]; then
+            echo "::error::languages.svg was not generated"
+            exit 1
+          fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # 変更がないときはコミットせず正常終了する
-          if git diff --quiet -- languages.svg; then
+          # 先に add する。未追跡ファイルは git diff では検出できず、
+          # 初回実行時に「変更なし」と誤判定されるため。
+          git add languages.svg
+          # --cached でインデックスと HEAD を比較する（新規追加も検出される）
+          if git diff --cached --quiet -- languages.svg; then
             echo "no change"
             exit 0
           fi
-          git add languages.svg
           git commit -m "chore: 言語統計を更新"
           git push
