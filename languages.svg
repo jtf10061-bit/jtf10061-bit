@@ -11,16 +11,16 @@
 </style>
 <rect class="bg" width="516" height="156"/>
 <text class="title" x="20" y="26">Most used languages</text>
-<text class="lang" x="20" y="58">Python</text>
+<text class="lang" x="20" y="58">TypeScript</text>
 <rect class="track" x="138" y="52.0" width="300" height="10" rx="5"/>
-<rect x="138" y="52.0" width="129.39" height="10" rx="5" fill="#3572A5"/>
-<text class="pct" x="448" y="58">43.1%</text>
-<text class="lang" x="20" y="88">TypeScript</text>
+<rect x="138" y="52.0" width="127.48" height="10" rx="5" fill="#3178c6"/>
+<text class="pct" x="448" y="58">42.5%</text>
+<text class="lang" x="20" y="88">Python</text>
 <rect class="track" x="138" y="82.0" width="300" height="10" rx="5"/>
-<rect x="138" y="82.0" width="121.05" height="10" rx="5" fill="#3178c6"/>
-<text class="pct" x="448" y="88">40.3%</text>
+<rect x="138" y="82.0" width="122.74" height="10" rx="5" fill="#3572A5"/>
+<text class="pct" x="448" y="88">40.9%</text>
 <text class="lang" x="20" y="118">CSS</text>
 <rect class="track" x="138" y="112.0" width="300" height="10" rx="5"/>
-<rect x="138" y="112.0" width="47.10" height="10" rx="5" fill="#663399"/>
-<text class="pct" x="448" y="118">15.7%</text>
+<rect x="138" y="112.0" width="47.76" height="10" rx="5" fill="#663399"/>
+<text class="pct" x="448" y="118">15.9%</text>
 </svg>
